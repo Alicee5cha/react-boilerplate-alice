@@ -1,0 +1,15 @@
+# npm
+node_modules
+npm-debug.log*
+
+# VScode
+.VScode
+
+# Auto-generated stuff
+coverage
+build
+node_modules
+stats.json
+
+.DS_Store
+.idea

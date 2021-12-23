@@ -1,0 +1,73 @@
+{
+  "name": "react-boilerplate-alice",
+  "version": "1.0.0",
+  "description": "Basic boilerplate for react projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "prettier:all": "node_modules/.bin/prettier --write \"src/**/*\"",
+    "lint:css": "stylelint src/**/*.js",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
+    "lint-staged": "lint-staged",
+    "precommit": "npm run lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alicee5cha/react-boilerplate-alice.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "git",
+    "react",
+    "redux"
+  ],
+  "bugs": {
+    "url": "https://github.com/Alicee5cha/react-boilerplate-alice/issues"
+  },
+  "homepage": "https://github.com/Alicee5cha/react-boilerplate-alice#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "lint-staged": {
+    "src": [
+      "npm run prettier:all",
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hot-loader": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "5.2.7",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^4.0.7",
+    "lint-staged": "^8.2.1",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.1",
+    "sass-loader": "10.1.1",
+    "style-loader": "2.0.0",
+    "stylelint": "^14.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
+  }
+}
